@@ -6,15 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_open"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Open BottomSheet"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp">
 
+        <FrameLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EECCCCCC"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+            <TextView
+                android:id="@+id/pinned_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#50FF0000"
+                android:padding="16dp"
+                android:text="Top" />
+
+            <TextView
+                android:id="@+id/pinned_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5000FF00"
+                android:padding="16dp"
+                android:text="Center" />
+
+            <TextView
+                android:id="@+id/pinned_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#500000FF"
+                android:padding="16dp"
+                android:text="Bottom"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
