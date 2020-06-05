@@ -50,8 +50,7 @@
                 android:layout_height="wrap_content"
                 android:background="#500000FF"
                 android:padding="16dp"
-                android:text="Bottom"
-                android:visibility="gone" />
+                android:text="Bottom" />
         </FrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
